@@ -44,7 +44,7 @@ class FlakrTestCase(unittest.TestCase):
     def test_empty_db(self):
         '''Assegura que o banco de dados está vazio'''
         rv = self.app.get('/')
-        assert b'No entries here so far' in rv.data
+        assert b'No entries yet. Add some!' in rv.data
 
     def test_login_logout(self):
         '''Testa login e logout usando as funções auxiliares'''
